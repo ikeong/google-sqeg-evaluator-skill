@@ -1,46 +1,60 @@
-# Google Search Quality Evaluator Guidelines (SQEG) - Part 4: Reputation & Independence Checks
+# Google Search Quality Evaluator Guidelines (SQEG) - Section 11.0: Reputation Audit Engine
 
-This reference covers the specific instructions in Section 11.0 of the SQEG for auditing the reputation of a website and its content creators.
-
----
-
-## 1. Why Reputation Matters
-A website can claim anything about its expertise or history on its "About Us" page. Therefore, Google Quality Raters are instructed to perform independent research to uncover what real-world sources say about the company, the website, and the individual authors.
+This reference details the instructions in Section 11.0 of the SQEG for investigating the reputation of a website and its individual content creators.
 
 ---
 
-## 2. Setting Up Reputation Search Footprints
-Raters use specific search parameters to exclude self-published content. When auditing, perform these searches:
+## 1. Why Third-Party Reputation is Critical
 
-### A. Site Brand Reputation Footprints
-* To find what others say about a domain while excluding results from that domain:
+Google's guidelines warn raters that **a website cannot be trusted to rate itself**. The content on "About Us" or "Press" pages is often self-promotional. Therefore, a rater's rating must be based on **independent, third-party research**.
+
+---
+
+## 2. Reputation Footprint Search Commands
+To audit a site's reputation, construct search strings that exclude the brand's own domain. This isolates external reviews and commentary.
+
+### A. Domain Reputation Scans
+* **Excluding Self-References:** Set up search queries using the `-site:` operator.
   `[brandName -site:brandDomain.com]`
-* To search for consumer complaints, scams:
+* **Scanning for Negative Consensus:** Search for complaints, scams, or fraud reports.
   `[brandName reviews -site:brandDomain.com]`
   `[brandName scam -site:brandDomain.com]`
+  `[brandName lawsuit -site:brandDomain.com]`
   `[brandName fraud -site:brandDomain.com]`
 
-### B. Author/Creator Reputation Footprints
-* To find references, bios, and credentials of the writer or editor:
+### B. Creator / Author Scans
+* **Verifying Author Authority:** Search for the writer's name to see their credentials, other publications, and professional standing.
   `[authorName -site:brandDomain.com]`
   `[authorName credentials]`
   `[authorName publications]`
 
 ---
 
-## 3. High-Quality Trust Sources
-Analyze reputation using the following recognized authority hubs:
-1. **Wikipedia Pages:** A Wikipedia page for a website, company, or individual is a strong indicator of high E-E-A-T and authoritativeness.
-2. **Official Organizations & Professional Listings:** Medical boards, legal registries, certified accounting boards, or governmental directories.
-3. **Major News Outlets:** Neutral, investigative reporting or profiles about the brand or author.
-4. **Professional Accolades:** Research citations, industry awards, or academic profiles on Google Scholar.
-5. **Customer Reviews Aggregators:** Better Business Bureau (BBB), Trustpilot, or industry-specific review platforms. (Look for overall consensus, not just a single bad review).
+## 3. High-Quality Third-Party Sources
+
+Raters look for reputation consensus on these platforms:
+
+1. **Wikipedia:**
+   * Wikipedia articles are highly valued by Google because of their strict editing standards and verified sources.
+   * If a site or author has a neutral or positive Wikipedia page, it is a strong signal of high authority.
+2. **Professional & Regulatory Organizations:**
+   * Better Business Bureau (BBB) for commercial websites (look for A+ ratings, complaints, and resolution history).
+   * Government registries (SEC, FDA license status, medical boards).
+   * Academic search systems like Google Scholar to verify research publications.
+3. **Consumer Review Platforms (Aggregated Consensuses):**
+   * Trustpilot, TripAdvisor, Yelp, or industry-specific review forums.
+   * *Rule:* Do not judge a brand based on a single negative review. Look for systemic patterns, volume of complaints, and how the company handles disputes.
+4. **Independent News & Media:**
+   * Independent articles in recognized newspapers (e.g., The New York Times, BBC, specialized industry journals).
 
 ---
 
-## 4. Reputation Classification Rules
-- **Exceptional Reputation (Highest PQ):** Award-winning creators, globally recognized experts, or institutional portals with high praise.
-- **Positive Reputation (High PQ):** Clean record, positive user reviews, referenced as a reliable source in their industry.
-- **Neutral Reputation (Medium PQ):** No major positive or negative mentions found. This is common for small, personal blogs and is treated as neutral (not penalized unless it is YMYL).
-- **Poor Reputation (Low PQ):** Frequent consumer complaints, negative business reviews, or lack of trust signals.
-- **Extremely Negative Reputation (Lowest PQ):** Evidence of scams, malicious hacking, criminal charges, or medical/financial malpractice.
+## 4. Rating Classifications Based on Reputation
+
+| Reputation Level | Specific Audit Observations | PQ Score Impact |
+| :--- | :--- | :--- |
+| **Stellar Reputation** | Recognized by national or international awards, positive Wikipedia pages, and citations from top industry organizations. | High / Highest PQ |
+| **Neutral / No Reputation** | No mentions in external reviews, no complaints. Common for small personal blogs. | Medium PQ (No penalty unless YMYL) |
+| **Inadequate Trust** | Outdated info, lack of author credentials on YMYL, missing contact details. | Low PQ |
+| **Poor Reputation** | Frequent consumer complaints on independent sites, low rating on BBB/TrustPilot, lack of customer service response. | Low PQ |
+| **Extremely Negative** | Fraud warnings, scams, criminal charges, or offering dangerous medical advice that contradicts consensus. | Lowest PQ |

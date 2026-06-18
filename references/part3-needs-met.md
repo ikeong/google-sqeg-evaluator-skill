@@ -1,52 +1,77 @@
-# Google Search Quality Evaluator Guidelines (SQEG) - Part 3: Needs Met (NM) Rating Methodology
+# Google Search Quality Evaluator Guidelines (SQEG) - Section 12.0: Needs Met Rating Manual
 
-This reference explains the guidelines' framework for rating Needs Met (NM)—how helpful and satisfying a search result page is to users based on their search queries (Sections 12.0 through 17.0 of the SQEG).
-
----
-
-## 1. Classifying Search Query Intent
-Before determining the Needs Met rating, the query intent must be identified. Understanding what the user wants is crucial to evaluating the page.
-
-### A. Know Query
-The intent is to find information about a topic.
-* *Example:* "Who is the Prime Minister of Canada?" or "What causes volcanic eruptions?"
-* **Know Simple:** A sub-category where the user wants a short, factual answer that can be displayed in a few words or a single sentence.
-  - *Example:* "USA president height" or "10 USD to EUR".
-
-### B. Do Query
-The intent is to perform an action, download something, buy a product, or interact with a page.
-* *Example:* "Buy running shoes online", "Play Pacman game", or "IRS tax return form download".
-
-### C. Website Query
-The intent is to visit a specific website or homepage.
-* *Example:* "Youtube", "BBC News", or "StackOverflow login".
-
-### D. Visit in Person Query
-The intent is to navigate to a physical location.
-* *Example:* "Best coffee shops near me", "Closest pharmacy open 24 hours", or "Target store Muscat location".
+This reference details the instructions in Sections 12.0 through 17.0 of Google's Search Quality Evaluator Guidelines (SQEG) for rating Needs Met (NM).
 
 ---
 
-## 2. Needs Met Rating Scale Defined
+## 1. Classifying Search Intents (The Needs Met Context)
 
-Raters assign one of the following grades to evaluate how well a search result satisfies the query:
+Every search query has a specific user intent. Raters must classify the query into one of these categories before rating the result:
+
+### A. Know Intent (Seeking Information)
+* **Goal:** The user wants to learn something.
+* **Know Simple:** A sub-category where the user wants a short, factual answer (e.g., weather forecast, conversions, birthdays of famous people).
+  - *Example:* "How old is Elon Musk" or "Convert 100 USD to GBP".
+  - *Expectation:* Needs an immediate, accurate, and easy-to-read answer.
+
+### B. Do Intent (Executing Action)
+* **Goal:** The user wants to perform an action, buy a product, download software, or sign up for a service.
+  - *Example:* "Buy cheap flight ticket to Muscat", "Download VLC player", or "Online Photoshop editor".
+  - *Expectation:* Requires direct links to functional pages, checkout cards, or interactive web applications.
+
+### C. Website Intent (Brand Navigation)
+* **Goal:** The user wants to navigate to a specific website or webpage.
+  - *Example:* "YouTube login", "Instagram index", or "Raja passenger portal".
+  - *Expectation:* The official landing page or login portal must be the top result.
+
+### D. Visit in Person Intent (Local Search)
+* **Goal:** The user wants to find a physical business or point of interest near their current location.
+  - *Example:* "Italian restaurant near me", "Emergency pharmacy open now", or "Gas station".
+  - *Expectation:* Location maps, operational hours, addresses, and customer reviews.
+
+---
+
+## 2. Needs Met Rating Scale and Decision Tree
+
+The Needs Met rating scale measures how helpful the search result is to a user based on their search query.
+
+```
+                  ┌─────────────────────────────────────┐
+                  │ Does it solve the query completely? │
+                  └──────────────────┬──────────────────┘
+                                     │
+                     ┌───────────────┴───────────────┐
+                    YES                              NO
+                     ▼                               ▼
+      ┌──────────────────────────────┐ ┌──────────────────────────────┐
+      │       Fully Meets (FullyM)   │ │ Does it provide high value?  │
+      │   (Immediate answer, no more │ └──────────────┬───────────────┘
+      │      searching required)     │                │
+      └──────────────────────────────┘        ┌───────┴───────┐
+                                             YES              NO
+                                              ▼               ▼
+                                       ┌───────────┐   ┌─────────────┐
+                                       │ HighlyM   │   │ MM/SM/Fails │
+                                       └───────────┘   └─────────────┘
+```
 
 ### 🏆 Fully Meets (FullyM)
-* The result is a perfect and immediate response to the query.
-* The user is completely satisfied and does not need to click on any other results or do another search.
-* *Restriction:* Only possible for narrow, specific queries (e.g., "Facebook official site" or "Convert 50 C to F"). Broad queries like "how to build a website" can almost never get a FullyM rating.
+* **Definition:** The result completely and immediately answers the query. The user is fully satisfied and does not need to look at any other results.
+* **When to apply:** Only for narrow, non-ambiguous queries (e.g., official logins, short calculations, conversions).
+* **Exceptions:** Broad queries with multiple interpretations (e.g., "depression treatments" or "best laptops") can never receive a FullyM rating because no single result satisfies all users.
 
 ### ⭐ Highly Meets (HM)
-* The result is extremely helpful, detailed, and directly answers the query for almost all searchers.
-* It shows high E-E-A-T and uses clear formatting.
+* **Definition:** Very helpful, detailed, and completely satisfying. It covers the core intent for almost all users.
+* **When to apply:** High-quality articles, secure download interfaces, or comprehensive product reviews by credible authors.
 
 ### ⚖️ Moderately Meets (MM)
-* The result is helpful and useful, but it doesn't cover all aspects of the query, it is slightly basic, or it only satisfies one interpretation of a multi-intent query.
+* **Definition:** Good and helpful, but missing some key details or only satisfies a secondary intent of the query.
+* **When to apply:** Decent content that needs more depth, or an article that only addresses a specific part of a broad search topic.
 
 ### ⚠️ Slightly Meets (SM)
-* The result has low utility. The user has to do extra clicking or reading to find what they want.
-* The page could contain outdated information, thin content, or be written by someone without E-E-A-T.
+* **Definition:** Low utility. The user has to do significant reading, filtering, or click through multiple pages to find the answer.
+* **When to apply:** Thin content, posts filled with keyword fluff, or generic articles written without real E-E-A-T.
 
 ### 🚨 Fails to Meet (FailsM)
-* The result is completely useless.
-* The page is off-topic, broken, containing severe typos, deceptive, or a spam/lowest-quality page.
+* **Definition:** Completely useless.
+* **When to apply:** Irrelevant results, dead links, outdated information, deceptive pages, or lowest-quality scam sites.
